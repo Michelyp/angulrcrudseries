@@ -13,7 +13,7 @@
         <select #cajaseleccionado
     name="cajaseleccionado"
     class="form-select">
-        <option *ngFor="let serie of series">{{serie.nombre}}</option>
+        <option *ngFor="let serie of series" value="{{serie.idSerie}}">{{serie.nombre}}</option>
     </select>
     <button class="btn btn-info" (click)="insertarPersonaje()">
         Create

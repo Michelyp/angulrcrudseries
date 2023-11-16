@@ -25,7 +25,7 @@ export class MuevopersonajeComponent implements OnInit{
     var id = parseInt(this.cajaIdRef.nativeElement.value);
     var nom= this.cajaNombreRef.nativeElement.value;
     var img = this.cajaImagenRef.nativeElement.value;
-    var sele=parseInt(this.cajaSeleccionadoRef.nativeElement.option.value);
+    var sele=parseInt(this.cajaSeleccionadoRef.nativeElement.value);
 
     var newPer = new Personajes(id,nom,img,sele);
     this._serviceSeries.postNuevoPersonaje(newPer).subscribe(response=>{

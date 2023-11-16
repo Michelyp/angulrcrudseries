@@ -1,0 +1,15 @@
+<!-- <a [routerLink]="['/detalle', personajes.idSerie]" class="btn btn-info">Volver</a> -->
+<table class="table table-warning">
+  <thead>
+    <tr>
+      <th>Personaje</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let persona of personajes">
+      <td>{{ persona.nombre }}</td>
+      <td><img src="{{ persona.imagen }}" style="width: 150px" /></td>
+    </tr>
+  </tbody>
+</table>

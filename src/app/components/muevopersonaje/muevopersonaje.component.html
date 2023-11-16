@@ -1,0 +1,21 @@
+<form #insertForm="ngForm">
+    <label>Id personaje</label>
+    <input type="number" class="form-control"
+        #cajaid name="cajaid"/>
+    <label>Nombre</label>
+    <input type="text" class="form-control"
+        #cajanombre name="cajanombre"/>
+    <label>Imagen</label>
+    <input type="text" class="form-control"
+        #cajaImagen name="cajaImagen"/>
+        
+        <label>Personajes</label>
+        <select #cajaseleccionado
+    name="cajaseleccionado"
+    class="form-select">
+        <option *ngFor="let serie of series">{{serie.nombre}}</option>
+    </select>
+    <button class="btn btn-info" (click)="insertarPersonaje()">
+        Create
+    </button>
+</form>
